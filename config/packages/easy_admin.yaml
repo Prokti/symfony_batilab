@@ -1,0 +1,28 @@
+easy_admin:
+    entities:
+#        # List the entity class name you want to manage
+
+        Maisons:
+            class: App\Entity\House
+            list:
+                fields: ['name', 'price_ht', 'categories']
+
+        Categories:
+            class: App\Entity\Category
+
+        Product:
+          class: App\Entity\Product
+
+        Lot:
+          class: App\Entity\Lot
+
+        Contact:
+          class: App\Entity\Contact
+          list:
+              fields: ['lots', 'societe', 'nom', 'email', 'telephone']
+
+    design:
+        brand_color: '#0000FF'
+        color_scheme: 'dark'
+
+    site_name: "BATILAB ADMIN"
