@@ -91,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
-              <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -297,7 +297,7 @@
       <workItem from="1515075403289" duration="6670000" />
       <workItem from="1515145903602" duration="5618000" />
       <workItem from="1515278542145" duration="23000" />
-      <workItem from="1515278580060" duration="13102000" />
+      <workItem from="1515278580060" duration="13165000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2">
       <created>1515405257358</created>
@@ -313,11 +313,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515405369598</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="deleate idea 2">
+      <created>1515405459256</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1515405459256</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26460000" />
+    <option name="totallyTimeSpent" value="26523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -354,7 +361,8 @@
     <MESSAGE value="commit 1" />
     <MESSAGE value="commit 2" />
     <MESSAGE value="deleate idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleate idea" />
+    <MESSAGE value="deleate idea 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleate idea 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -759,7 +767,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
-          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
