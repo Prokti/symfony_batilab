@@ -91,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
-              <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -247,34 +247,6 @@
               <item name="symfony_app1" type="b2602c69:ProjectViewProjectNode" />
               <item name="symfony_app1" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="symfony_app1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="symfony_app1" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="symfony_app1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="symfony_app1" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="symfony_app1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="symfony_app1" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="symfony_app1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="symfony_app1" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="symfony_app1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="symfony_app1" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -325,7 +297,7 @@
       <workItem from="1515075403289" duration="6670000" />
       <workItem from="1515145903602" duration="5618000" />
       <workItem from="1515278542145" duration="23000" />
-      <workItem from="1515278580060" duration="13006000" />
+      <workItem from="1515278580060" duration="13102000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2">
       <created>1515405257358</created>
@@ -334,11 +306,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515405257358</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="deleate idea">
+      <created>1515405369598</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1515405369598</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26364000" />
+    <option name="totallyTimeSpent" value="26460000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -374,7 +353,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit 1" />
     <MESSAGE value="commit 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit 2" />
+    <MESSAGE value="deleate idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleate idea" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -779,7 +759,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
-          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
           <folding />
         </state>
       </provider>
