@@ -1317,123 +1317,281 @@
       <Engine>InnoDB</Engine>
       <Collation>utf8_unicode_ci</Collation>
     </table>
-    <table id="331" parent="5" name="house">
+    <table id="331" parent="5" name="contact">
       <Engine>InnoDB</Engine>
       <Collation>utf8_unicode_ci</Collation>
     </table>
-    <table id="332" parent="5" name="migration_versions">
+    <table id="332" parent="5" name="contact_lot">
       <Engine>InnoDB</Engine>
       <Collation>utf8_unicode_ci</Collation>
     </table>
-    <table id="333" parent="5" name="product">
+    <table id="333" parent="5" name="house">
       <Engine>InnoDB</Engine>
       <Collation>utf8_unicode_ci</Collation>
     </table>
-    <column id="334" parent="329" name="id">
+    <table id="334" parent="5" name="house_category">
+      <Engine>InnoDB</Engine>
+      <Collation>utf8_unicode_ci</Collation>
+    </table>
+    <table id="335" parent="5" name="lot">
+      <Engine>InnoDB</Engine>
+      <Collation>utf8_unicode_ci</Collation>
+    </table>
+    <table id="336" parent="5" name="migration_versions">
+      <Engine>InnoDB</Engine>
+      <Collation>utf8_unicode_ci</Collation>
+    </table>
+    <table id="337" parent="5" name="product">
+      <Engine>InnoDB</Engine>
+      <Collation>utf8_unicode_ci</Collation>
+    </table>
+    <column id="338" parent="329" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="335" parent="329" name="PRIMARY">
+    <key id="339" parent="329" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="336" parent="330" name="id">
+    <column id="340" parent="330" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="337" parent="330" name="name">
+    <column id="341" parent="330" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="338" parent="330" name="PRIMARY">
+    <key id="342" parent="330" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="339" parent="331" name="id">
+    <column id="343" parent="331" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="340" parent="331" name="name">
+    <column id="344" parent="331" name="societe">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="341" parent="331" name="price_ht">
+    <column id="345" parent="331" name="prenom">
       <Position>3</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="342" parent="331" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="343" parent="332" name="version">
-      <Position>1</Position>
+    <column id="346" parent="331" name="nom">
+      <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="344" parent="332" name="PRIMARY">
+    <column id="347" parent="331" name="email">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="348" parent="331" name="telephone">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="349" parent="331" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>version</ColNames>
+      <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="345" parent="333" name="id">
+    <column id="350" parent="332" name="contact_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="351" parent="332" name="lot_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="352" parent="332" name="IDX_F6BB4823E7A1254A">
+      <ColNames>contact_id</ColNames>
+    </index>
+    <index id="353" parent="332" name="IDX_F6BB4823A8CBA5F7">
+      <ColNames>lot_id</ColNames>
+    </index>
+    <key id="354" parent="332" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>contact_id
+lot_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="355" parent="332" name="FK_F6BB4823E7A1254A">
+      <ColNames>contact_id</ColNames>
+      <RefSchemaName>symfony_app1</RefSchemaName>
+      <RefTableName>contact</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="356" parent="332" name="FK_F6BB4823A8CBA5F7">
+      <ColNames>lot_id</ColNames>
+      <RefSchemaName>symfony_app1</RefSchemaName>
+      <RefTableName>lot</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="357" parent="333" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="346" parent="333" name="category_id">
+    <column id="358" parent="333" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="359" parent="333" name="price_ht">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="360" parent="333" name="long_ext">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="361" parent="333" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="362" parent="334" name="house_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="363" parent="334" name="category_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="364" parent="334" name="IDX_65DEA29E6BB74515">
+      <ColNames>house_id</ColNames>
+    </index>
+    <index id="365" parent="334" name="IDX_65DEA29E12469DE2">
+      <ColNames>category_id</ColNames>
+    </index>
+    <key id="366" parent="334" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>house_id
+category_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="367" parent="334" name="FK_65DEA29E6BB74515">
+      <ColNames>house_id</ColNames>
+      <RefSchemaName>symfony_app1</RefSchemaName>
+      <RefTableName>house</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="368" parent="334" name="FK_65DEA29E12469DE2">
+      <ColNames>category_id</ColNames>
+      <RefSchemaName>symfony_app1</RefSchemaName>
+      <RefTableName>category</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="369" parent="335" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="370" parent="335" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="371" parent="335" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="372" parent="336" name="version">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="373" parent="336" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>version</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="374" parent="337" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="375" parent="337" name="category_id">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="347" parent="333" name="name">
+    <column id="376" parent="337" name="name">
       <Position>3</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="348" parent="333" name="price">
+    <column id="377" parent="337" name="price">
       <Position>4</Position>
       <DataType>decimal(10,2)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="349" parent="333" name="description">
+    <column id="378" parent="337" name="description">
       <Position>5</Position>
       <DataType>longtext|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="350" parent="333" name="IDX_D34A04AD12469DE2">
+    <index id="379" parent="337" name="IDX_D34A04AD12469DE2">
       <ColNames>category_id</ColNames>
     </index>
-    <key id="351" parent="333" name="PRIMARY">
+    <key id="380" parent="337" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="352" parent="333" name="FK_D34A04AD12469DE2">
+    <foreign-key id="381" parent="337" name="FK_D34A04AD12469DE2">
       <ColNames>category_id</ColNames>
       <RefSchemaName>symfony_app1</RefSchemaName>
       <RefTableName>category</RefTableName>

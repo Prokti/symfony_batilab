@@ -1,4 +1,6 @@
 easy_admin:
+    list:
+        actions: ['show', 'export']
     entities:
 #        # List the entity class name you want to manage
 
@@ -19,10 +21,17 @@ easy_admin:
         Contact:
           class: App\Entity\Contact
           list:
-              fields: ['lots', 'societe', 'nom', 'email', 'telephone']
+              fields:
+                  - { property: 'lots', type: 'array' }
+                  - { property: 'societe'}
+                  - { property: 'nom_prenom'}
+                  - { property: 'telephone_portable' }
+                  - { property: 'email', type: 'email' }
 
     design:
-        brand_color: '#0000FF'
+        brand_color: '#3f62a7'
         color_scheme: 'dark'
+
+
 
     site_name: "BATILAB ADMIN"

@@ -83,7 +83,6 @@ class Category
         $this->products = new ArrayCollection();
     }
     /**
-     * Set all products in the category.
      *
      * @param Product[] $products
      */
