@@ -1,6 +1,6 @@
 easy_admin:
     list:
-        actions: ['show', 'export']
+        actions: ['show']
     entities:
 #        # List the entity class name you want to manage
 
@@ -18,20 +18,31 @@ easy_admin:
         Lot:
           class: App\Entity\Lot
 
+        ContactType:
+            class: App\Entity\ContactType
+
         Contact:
           class: App\Entity\Contact
           list:
               fields:
-                  - { property: 'lots', type: 'array' }
+                  - { property: 'lots', type: array }
                   - { property: 'societe'}
-                  - { property: 'nom_prenom'}
+                  - { property: 'nom_prenom', label: 'Nom'}
                   - { property: 'telephone_portable' }
                   - { property: 'email', type: 'email' }
+                  - { property: contact_type, label: Type}
+
 
     design:
         brand_color: '#3f62a7'
         color_scheme: 'dark'
+        assets:
+            favicon: '../assets/logofi.jpg'
 
 
 
-    site_name: "BATILAB ADMIN"
+
+
+
+
+    site_name: "GROUPE BERDIN ADMIN"

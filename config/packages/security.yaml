@@ -1,13 +1,32 @@
 security:
     # https://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory: { memory: ~ }
+        in_memory:
+            memory:
+                users:
+                    admin:
+                        password: $2y$12$u2vO6x3xU4OQsl.9DYfA8OthUqUZ/K21h72QuC9Na/aJiPjWFU07S
+                        roles: ROLE_ADMIN
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
             anonymous: ~
+            http_basic: ~
+            logout:
+                path: /logout
+                target: /cokpit
+
+
+
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }
+
+    encoders:
+        Symfony\Component\Security\Core\User\User:
+            algorithm: bcrypt
+            cost: 12
 
             # activate different ways to authenticate
 
