@@ -358,7 +358,7 @@
       <workItem from="1515278542145" duration="23000" />
       <workItem from="1515278580060" duration="51324000" />
       <workItem from="1515574067256" duration="98000" />
-      <workItem from="1515574183454" duration="2740000" />
+      <workItem from="1515574183454" duration="2745000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2">
       <created>1515405257358</created>
@@ -423,11 +423,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515579740215</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="maj gitignore">
+      <created>1515579753825</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1515579753825</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67520000" />
+    <option name="totallyTimeSpent" value="67525000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
