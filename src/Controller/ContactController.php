@@ -25,7 +25,15 @@ class ContactController extends Controller
 
         return $this->json($em);
 
+   }
+
+   /**
+    * @Route("/contacts", name="contacts")
+    */
+   public function show()
+   {
+       return new Response("Hello Symfony 4");
+   }
 
 
-    }
 }
