@@ -30,7 +30,7 @@ easy_admin:
                   - { property: 'lots', type: array }
                   - { property: 'societe'}
                   - { property: 'nom_prenom', label: 'Nom'}
-                  - { property: 'telephone_portable' }
+                  - { property: 'telephone_portable', type: 'tel' }
                   - { property: 'email', type: 'email' }
                   - { property: contact_type, label: Type}
 

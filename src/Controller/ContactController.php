@@ -17,35 +17,5 @@ use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
 class ContactController extends Controller
 {
-    /**
-     * @Route("/contact", name="contact")
-     */
-    public function index()
-    {
-
-
-        $em = $this->getDoctrine()->getRepository(Contact::class)->findAll();
-
-        return $this->json($em);
-
-   }
-
-   /**
-    * @Route("/contacts", name="contacts")
-    * @Method("GET")
-    */
-   public function show()
-   {
-       $contacts = $this->getDoctrine()->getRepository(Contact::class)->findAll();
-
-
-
-       $data = [
-           'contacts' => $contacts,
-       ];
-
-       return new JsonResponse($data);
-   }
-
 
 }
