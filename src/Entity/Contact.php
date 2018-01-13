@@ -73,10 +73,9 @@ class Contact
 
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Lot", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="App\Entity\Lot", cascade={"persist"}, inversedBy= "contacts")
      */
     private $lots;
-
 
     /**
      * @return mixed
@@ -129,7 +128,7 @@ class Contact
 
 
     /**
-     * @return Collection|Lot[]
+     * @return ArrayCollection
      */
     public function getLots()
     {

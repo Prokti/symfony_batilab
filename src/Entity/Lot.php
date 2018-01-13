@@ -60,6 +60,26 @@ class Lot
         $this->name = $name;
     }
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Contact", mappedBy="lots")
+     */
+    private $contacts;
+
+    /**
+     * @return mixed
+     */
+    public function getContacts()
+    {
+        return $this->contacts;
+    }
+
+    /**
+     * @param mixed $contacts
+     */
+    public function setContacts($contacts): void
+    {
+        $this->contacts = $contacts;
+    }
 
 
 

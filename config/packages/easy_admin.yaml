@@ -9,7 +9,12 @@ easy_admin:
         Maisons:
             class: App\Entity\House
             list:
-                fields: ['name', 'price_ht', 'categories']
+                fields:
+                    - { property: name, label: Nom }
+                    - { property: price_ht, label: Prix HT }
+                    - { property: price_ttc, label: Prix TTC }
+                    - { property: categories, type: array }
+
 
         Categories:
             class: App\Entity\Category
@@ -27,7 +32,7 @@ easy_admin:
           class: App\Entity\Contact
           list:
               fields:
-                  - { property: 'lots', type: array }
+                  - { property: 'lots', type: 'array' }
                   - { property: 'societe'}
                   - { property: 'nom_prenom', label: 'Nom' }
                   - { property: 'telephone_portable', type: 'tel' }
@@ -40,6 +45,16 @@ easy_admin:
         color_scheme: 'dark'
         assets:
             favicon: '../images/logofi.jpg'
+
+        menu:
+            - { label: Utilisateurs }
+            - Contact
+            - Maisons
+            - label: Admin
+              children: [Categories, Lot, ContactType]
+
+
+
 
 
 

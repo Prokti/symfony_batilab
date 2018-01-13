@@ -19,22 +19,35 @@ class House
     /**
      * @ORM\Column(type="string")
      */
-    public $name;
+    private $name;
 
     /**
      * @ORM\Column(type="integer")
      */
-    public $price_ht;
+    private $price_ht;
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="float", nullable=true)
      */
-    public $long_ext;
+    private $long_ext;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Category", cascade={"persist"})
      */
     private $categories;
+
+    private $price_ttc;
+
+    /**
+     * @return mixed
+     */
+    public function getPriceTtc()
+    {
+        $total = $this->price_ht * 1.20 ;
+        return ($total);
+    }
+
+
 
     /**
      * @return mixed
