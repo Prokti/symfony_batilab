@@ -48,8 +48,8 @@ easy_admin:
 
         menu:
             - { label: Utilisateurs }
-            - Contact
-            - Maisons
+            - { entity: Contact, label: Contacts Pro}
+            - { entity: Maisons, label: Catalogue Maisons}
             - label: Admin
               children: [Categories, Lot, ContactType]
 

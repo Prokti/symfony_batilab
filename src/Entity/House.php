@@ -32,6 +32,32 @@ class House
     private $long_ext;
 
     /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+    private $larg_ext;
+
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+    private $surface_hab;
+
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+    private $surface_annexe;
+
+    /**
+    * @ORM\Column(type="integer", nullable=true)
+    */
+    private $nbr_chambre;
+
+    /**
+ * @ORM\Column(type="integer", nullable=true)
+ */
+    private $nbr_sdb;
+
+
+    /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Category", cascade={"persist"})
      */
     private $categories;
@@ -74,10 +100,6 @@ class House
     {
         return $this->id;
     }
-
-
-
-
 
     /**
      * @return mixed
@@ -125,6 +147,86 @@ class House
     public function setLongExt($long_ext): void
     {
         $this->long_ext = $long_ext;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLargExt()
+    {
+        return $this->larg_ext;
+    }
+
+    /**
+     * @param mixed $larg_ext
+     */
+    public function setLargExt($larg_ext): void
+    {
+        $this->larg_ext = $larg_ext;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSurfaceHab()
+    {
+        return $this->surface_hab;
+    }
+
+    /**
+     * @param mixed $surface_hab
+     */
+    public function setSurfaceHab($surface_hab): void
+    {
+        $this->surface_hab = $surface_hab;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSurfaceAnnexe()
+    {
+        return $this->surface_annexe;
+    }
+
+    /**
+     * @param mixed $surface_annexe
+     */
+    public function setSurfaceAnnexe($surface_annexe): void
+    {
+        $this->surface_annexe = $surface_annexe;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNbrChambre()
+    {
+        return $this->nbr_chambre;
+    }
+
+    /**
+     * @param mixed $nbr_chambre
+     */
+    public function setNbrChambre($nbr_chambre): void
+    {
+        $this->nbr_chambre = $nbr_chambre;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNbrSdb()
+    {
+        return $this->nbr_sdb;
+    }
+
+    /**
+     * @param mixed $nbr_sdb
+     */
+    public function setNbrSdb($nbr_sdb): void
+    {
+        $this->nbr_sdb = $nbr_sdb;
     }
 
 
