@@ -19,7 +19,7 @@ class ContactType
     /**
      * @ORM\Column(type="string")
      */
-    public $name;
+    private $name;
 
     public function __toString()
     {

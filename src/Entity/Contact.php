@@ -20,8 +20,6 @@ class Contact
         return $this->getSociete();
     }
 
-
-
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\ContactType")
      * @ORM\JoinColumn(nullable=true)
@@ -46,36 +44,42 @@ class Contact
     private $id;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      */
-    public $societe;
+    private $societe;
 
     /**
      * @ORM\Column(type="string")
      */
-    public $nom_prenom;
+    private $nom;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $prenom;
 
     /**
      * @ORM\Column(type="string", nullable=true)
      *
      */
-    public $email;
+    private $email;
 
     /**
      * @ORM\Column(type="string", nullable=true)
      */
-    public $telephone_portable;
+    private $telephone_portable;
 
     /**
      * @ORM\Column(type="string", nullable=true)
      */
-    public $telephone_bureau;
+    private $telephone_bureau;
 
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Lot", cascade={"persist"}, inversedBy= "contacts")
      */
     private $lots;
+
 
     /**
      * @return mixed
@@ -146,17 +150,17 @@ class Contact
     /**
      * @return mixed
      */
-    public function getNomPrenom()
+    public function getNom()
     {
-        return $this->nom_prenom;
+        return $this->nom;
     }
 
     /**
-     * @param mixed $nom_prenom
+     * @param mixed $nom
      */
-    public function setNomPrenom($nom_prenom): void
+    public function setNom($nom): void
     {
-        $this->nom_prenom = $nom_prenom;
+        $this->nom = $nom;
     }
 
     /**
@@ -189,6 +193,31 @@ class Contact
     public function setTelephoneBureau($telephone_bureau): void
     {
         $this->telephone_bureau = $telephone_bureau;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * @param mixed $prenom
+     */
+    public function setPrenom($prenom): void
+    {
+        $this->prenom = $prenom;
+    }
+
+
+
+    public function getNomPrenom()
+    {
+        $result =  $this->getPrenom() . " " . $this->getNom();
+
+        return $result;
     }
 
 

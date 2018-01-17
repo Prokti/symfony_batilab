@@ -2,7 +2,9 @@ easy_admin:
 
 
     list:
-        actions: ['show']
+        actions:
+            - { name: show, icon: search}
+            - { name: edit, icon: pencil}
     entities:
 #        # List the entity class name you want to manage
 
@@ -15,6 +17,19 @@ easy_admin:
                     - { property: price_ttc, label: Prix TTC }
                     - { property: categories, type: array }
 
+        HouseProduct:
+            class: App\Entity\HouseProduct
+
+        Users:
+            class: App\Entity\User
+            form:
+                fields:
+                    - fullName
+                    - username
+                    - email
+                        # if administrators are allowed to edit users' passwords and roles, add this:
+                    - { property: 'password', type: 'text', type_options: { required: false } }
+                    - { property: 'roles', type: 'choice', type_options: { multiple: true, choices: { 'ROLE_USER': 'ROLE_USER', 'ROLE_ADMIN': 'ROLE_ADMIN' } } }
 
         Categories:
             class: App\Entity\Category
@@ -28,11 +43,20 @@ easy_admin:
         ContactType:
             class: App\Entity\ContactType
 
+        Clients:
+            class: App\Entity\Contact
+            list:
+                dql_filter: entity.contact_type = 4
+
         Contact:
           class: App\Entity\Contact
           list:
+              #dql_filter: entity.contact_type = 1
+              max_results: 50
+
+
               fields:
-                  - { property: 'lots', type: 'array' }
+                  - { property: 'lots', type: 'simple_array' }
                   - { property: 'societe'}
                   - { property: 'nom_prenom', label: 'Nom' }
                   - { property: 'telephone_portable', type: 'tel' }
@@ -49,12 +73,10 @@ easy_admin:
         menu:
             - { label: Utilisateurs }
             - { entity: Contact, label: Contacts Pro}
+            - { entity: Clients, label: Clients}
             - { entity: Maisons, label: Catalogue Maisons}
             - label: Admin
-              children: [Categories, Lot, ContactType]
-
-
-
+              children: [Categories, Lot, ContactType, Product, HouseProduct, Users]
 
 
 

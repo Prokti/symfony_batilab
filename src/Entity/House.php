@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\HouseRepository")
@@ -20,6 +21,33 @@ class House
      * @ORM\Column(type="string")
      */
     private $name;
+
+    /**
+     * One Product has Many Features.
+     * @ORM\OneToMany(targetEntity="HouseProduct", mappedBy="house")
+     */
+    private $products;
+
+
+    public function __construct() {
+        $this->products = new ArrayCollection();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProducts()
+    {
+        return $this->products;
+    }
+
+    /**
+     * @param mixed $products
+     */
+    public function setProducts($products): void
+    {
+        $this->products = $products;
+    }
 
     /**
      * @ORM\Column(type="integer")
@@ -62,7 +90,12 @@ class House
      */
     private $categories;
 
-    private $price_ttc;
+    public function __toString()
+    {
+        return $this->getName();
+    }
+
+
 
     /**
      * @return mixed
@@ -70,7 +103,7 @@ class House
     public function getPriceTtc()
     {
         $total = $this->price_ht * 1.20 ;
-        return ($total);
+        return $total;
     }
 
 
