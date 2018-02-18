@@ -5,9 +5,11 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * Class Category
+ * @ApiResource()
  * @ORM\Entity
  * @ORM\Table (name="category")
  */

@@ -2,9 +2,11 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @ApiResource()
  * @ORM\Entity
  * @ORM\Table(name="product")
  */
@@ -85,7 +87,7 @@ class Product
     public $price;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     public $description;
 
@@ -94,6 +96,8 @@ class Product
      * @ORM\JoinColumn(nullable=true)
      */
     private $category;
+
+
 
     public function getCategory()
     {

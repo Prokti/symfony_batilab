@@ -17,8 +17,37 @@ easy_admin:
                     - { property: price_ttc, label: Prix TTC }
                     - { property: categories, type: array }
 
+            form:
+                fields:
+                    - { property: name, label: Nom }
+                    - { property: price_ht, label: Prix HT, type: money }
+                    - { property: categories }
+                    - { property: products, type: entity }
+
+
+
+
         HouseProduct:
             class: App\Entity\HouseProduct
+
+        DevisProduct:
+            class: App\Entity\DevisProduct
+
+        Devis:
+            class: App\Entity\Devis
+            form:
+                fields:
+                    #- { type: 'group', css_class: 'col-sm-3', label: 'Informations' }
+                    -
+                        property: id
+                        type_options: {disabled: true}
+                    - name
+                    - date
+
+                    #- { type: 'group', css_class: 'col-sm-9', label: 'Produits' }
+                    - { property: devisProducts, type: collection, type_options: { entry_type: App\Form\DevisProductType, allow_delete: true, allow_add: true, by_reference: false}}
+                    #- { property: name , label: Product, type: entity , type_options: { class: 'App\Entity\Product'  } }
+                   # - addDevisProduct
 
         Users:
             class: App\Entity\User
@@ -35,7 +64,10 @@ easy_admin:
             class: App\Entity\Category
 
         Product:
-          class: App\Entity\Product
+            class: App\Entity\Product
+
+
+
 
         Lot:
           class: App\Entity\Lot
@@ -76,7 +108,7 @@ easy_admin:
             - { entity: Clients, label: Clients}
             - { entity: Maisons, label: Catalogue Maisons}
             - label: Admin
-              children: [Categories, Lot, ContactType, Product, HouseProduct, Users]
+              children: [Categories, Lot, ContactType, Product, HouseProduct, Users, Devis, DevisProduct]
 
 
 

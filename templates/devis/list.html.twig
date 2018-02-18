@@ -1,0 +1,18 @@
+{% extends'base.html.twig' %}
+
+{% block body %}
+    <ul>
+{% for devis in listDevis %}
+<li>{{ devis.name }} </li>
+        {% for product in devis.devisProducts %}
+   <ul>
+       <li>{{ product.product }}   ||  {{ product.quantity }} ----- ID_Devis :  {{ product.devis.id }} </li>
+   </ul>
+
+            {% endfor %}
+
+{% endfor %}
+
+
+    </ul>
+{% endblock %}

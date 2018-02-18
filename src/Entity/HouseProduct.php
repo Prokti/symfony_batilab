@@ -2,10 +2,14 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\HouseProductRepository")
+ * @ORM\Entity
+ * @ORM\Table(name="house_product")
  */
 class HouseProduct
 {
@@ -17,18 +21,18 @@ class HouseProduct
     private $id;
 
     /**
-     * @ORM\Column(type="decimal", scale=2)
+     * @ORM\Column(type="decimal", scale=2, nullable=true)
      */
-    private $quantity;
+    private $quantity = 0;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\House")
+     * @ORM\ManyToOne(targetEntity="App\Entity\House", inversedBy="products")
      * @ORM\JoinColumn(nullable=false)
      */
     private $house;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Product")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Product", inversedBy="houses")
      * @ORM\JoinColumn(nullable=false)
      */
     private $product;
@@ -92,10 +96,8 @@ class HouseProduct
 
     public function __toString()
     {
-        return  $this->getQuantity();
-
+        return   (string)$this->getProduct();
     }
-
 
 
 }

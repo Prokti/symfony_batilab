@@ -23,18 +23,18 @@ class House
     private $name;
 
     /**
-     * One Product has Many Features.
-     * @ORM\OneToMany(targetEntity="HouseProduct", mappedBy="house")
+     * @ORM\OneToMany(targetEntity="App\Entity\HouseProduct", mappedBy="house")
      */
     private $products;
 
-
-    public function __construct() {
+    public function __construct()
+    {
         $this->products = new ArrayCollection();
     }
 
+
     /**
-     * @return mixed
+     * @return ArrayCollection|Product[]
      */
     public function getProducts()
     {
@@ -48,6 +48,8 @@ class House
     {
         $this->products = $products;
     }
+
+
 
     /**
      * @ORM\Column(type="integer")
@@ -261,6 +263,8 @@ class House
     {
         $this->nbr_sdb = $nbr_sdb;
     }
+
+
 
 
 
